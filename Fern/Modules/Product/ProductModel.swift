@@ -1,42 +1,40 @@
 //
-//  ProductData.swift
+//  ProductModel.swift
 //  Fern
 //
-//  Created by Rayan Waked on 5/10/24.
+//  Created by Rayan Waked on 5/11/24.
 //
 
 import Foundation
 
-struct ProductModel {
-    func getProductInfo(for barcode: String, completion: @escaping (Result<Product, Error>) -> Void) {
-        guard let url = URL(string: "https://world.openfoodfacts.org/api/v0/product/\(barcode).json") else {
-            completion(.failure(MyError.invalidURL))
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(MyError.noData))
-                return
-            }
-            
-            do {
-                let product = try JSONDecoder().decode(Product.self, from: data)
-                completion(.success(product))
-            } catch {
-                completion(.failure(error))
-            }
-        }.resume()
-    }
+// MARK: - ProductModel
+class ProductModel: ObservableObject {
+    // MARK: - Properties
+    // Published properties to notify the view of changes
+    @Published var product: Product? = nil
+    @Published var isLoading = true
+    @Published var errorMessage: String? = nil
     
-    // Define your custom error type
-    enum MyError: Error {
-        case invalidURL
-        case noData
+    // MARK: - loadProduct
+    // Load a product by barcode
+    func loadProduct(with barcode: String) {
+        // Fetch the product data using the ProductService
+        ProductService.fetchProduct(barcode: barcode) { result in
+            // Switch to the main thread to update the UI
+            DispatchQueue.main.async {
+                // Set isLoading to false to indicate the loading is complete
+                self.isLoading = false
+                
+                // Handle the result of the fetch operation
+                switch result {
+                case .success(let productData):
+                    // If the fetch is successful, update the entire product object
+                    self.product = productData.product
+                case .failure(let error):
+                    // If the fetch fails, update the errorMessage
+                    self.errorMessage = error.localizedDescription
+                }
+            }
+        }
     }
 }

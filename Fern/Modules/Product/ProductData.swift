@@ -1,195 +1,199 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  ProductModel.swift
-//  Fern
-//
-//  Created by Rayan Waked on 5/9/24.
-//
-//   let productModel = try? JSONDecoder().decode(ProductModel.self, from: jsonData)
+//   let productData = try? JSONDecoder().decode(ProductData.self, from: jsonData)
 
 import Foundation
 
-// MARK: - ProductModel
+// TODO: - Expand JSONAny flexability as OpenFoodFacts database exhibits high inconsistency regardings types
+
+// MARK: - ProductData
 struct ProductData: Codable {
-    let code: String
-    let product: Product
-    let status: Int
-    let statusVerbose: String
+    let code: String?
+    let product: Product?
+    let status: Int?
+    let statusVerbose: String?
 
     enum CodingKeys: String, CodingKey {
         case code, product, status
         case statusVerbose = "status_verbose"
     }
-    
-    init(jsonData: Data) throws {
-        let decoder = JSONDecoder()
-        self = try decoder.decode(ProductModel.self, from: jsonData)
-    }
 }
 
 // MARK: - Product
 struct Product: Codable {
-    let id: String
-    let keywords: [String]
-    let addedCountriesTags, additivesDebugTags: [JSONAny]
-    let additivesN, additivesOldN: Int
-    let additivesOldTags, additivesOriginalTags, additivesPrevOriginalTags, additivesTags: [String]
-    let allergens, allergensFromIngredients, allergensFromUser: String
-    let allergensHierarchy: [JSONAny]
-    let allergensLc: String
-    let allergensTags, aminoAcidsPrevTags, aminoAcidsTags: [JSONAny]
-    let brands: String
-    let brandsTags: [String]
-    let categories: String
-    let categoriesHierarchy: [String]
-    let categoriesLc, categoriesOld: String
-    let categoriesProperties: CategoriesProperties
-    let categoriesPropertiesTags, categoriesTags: [String]
-    let categoryProperties: CategoryProperties
-    let checkersTags: [JSONAny]
-    let ciqualFoodNameTags: [String]
-    let citiesTags: [JSONAny]
-    let code: String
-    let codesTags: [String]
-    let comparedToCategory: String
-    let complete, completedT: Int
-    let completeness: Double
-    let correctorsTags: [String]
-    let countries, countriesBeforescanbot: String
-    let countriesHierarchy: [String]
-    let countriesLc: String
-    let countriesTags: [String]
-    let createdT: Int
-    let creator: Creator
-    let dataQualityBugsTags, dataQualityErrorsTags: [JSONAny]
-    let dataQualityInfoTags, dataQualityTags, dataQualityWarningsTags: [String]
-    let dataSources: String
-    let dataSourcesTags, debugParamSortedLangs: [String]
-    let ecoscoreData: EcoscoreData
-    let ecoscoreGrade: String
-    let ecoscoreTags, editorsTags: [String]
-    let embCodes, embCodesOrig: String
-    let embCodesTags, entryDatesTags: [String]
-    let expirationDate, foodGroups: String
-    let foodGroupsTags: [String]
-    let genericName, genericNameDe, genericNameEn, genericNameFr: String
-    let productID: String
-    let imageFrontSmallURL, imageFrontThumbURL, imageFrontURL, imageIngredientsSmallURL: String
-    let imageIngredientsThumbURL, imageIngredientsURL, imageNutritionSmallURL, imageNutritionThumbURL: String
-    let imageNutritionURL, imagePackagingSmallURL, imagePackagingThumbURL, imagePackagingURL: String
-    let imageSmallURL, imageThumbURL, imageURL: String
-    let images: Images
-    let informersTags: [String]
-    let ingredients: [Ingredient]
-    let ingredientsAnalysis: IngredientsAnalysis
-    let ingredientsAnalysisTags: [String]
-    let ingredientsDebug: [String?]
-    let ingredientsFromOrThatMayBeFromPalmOilN, ingredientsFromPalmOilN: Int
-    let ingredientsFromPalmOilTags: [JSONAny]
-    let ingredientsHierarchy, ingredientsIDSDebug: [String]
-    let ingredientsLc: String
-    let ingredientsN: Int
-    let ingredientsNTags, ingredientsOriginalTags: [String]
-    let ingredientsPercentAnalysis: Int
-    let ingredientsTags: [String]
-    let ingredientsText, ingredientsTextDe, ingredientsTextDebug, ingredientsTextEn: String
-    let ingredientsTextFr, ingredientsTextWithAllergens, ingredientsTextWithAllergensDe, ingredientsTextWithAllergensEn: String
-    let ingredientsTextWithAllergensFr: String
-    let ingredientsThatMayBeFromPalmOilN: Int
-    let ingredientsThatMayBeFromPalmOilTags: [JSONAny]
-    let ingredientsWithSpecifiedPercentN, ingredientsWithSpecifiedPercentSum, ingredientsWithUnspecifiedPercentN, ingredientsWithUnspecifiedPercentSum: Int
-    let ingredientsWithoutCiqualCodes: [String]
-    let ingredientsWithoutCiqualCodesN: Int
-    let interfaceVersionCreated, interfaceVersionModified: String
-    let knownIngredientsN: Int
-    let labels: String
-    let labelsHierarchy: [String]
-    let labelsLc, labelsOld: String
-    let labelsTags: [String]
-    let lang: String
-    let languages: Languages
-    let languagesCodes: LanguagesCodes
-    let languagesHierarchy, languagesTags, lastEditDatesTags: [String]
-    let lastEditor: Creator
-    let lastImageDatesTags: [String]
-    let lastImageT: Int
-    let lastModifiedBy: Creator
-    let lastModifiedT, lastUpdatedT: Int
-    let lc: String
-    let link: String
-    let mainCountriesTags: [JSONAny]
-    let manufacturingPlaces: String
-    let manufacturingPlacesTags: [JSONAny]
-    let maxImgid: String
-    let mineralsPrevTags, mineralsTags: [JSONAny]
-    let miscTags: [String]
-    let noNutritionData: String
-    let novaGroup: Int
-    let novaGroupDebug, novaGroups: String
-    let novaGroupsMarkers: [String: [[String]]]
-    let novaGroupsTags: [String]
-    let nucleotidesPrevTags, nucleotidesTags: [JSONAny]
-    let nutrientLevels: NutrientLevels
-    let nutrientLevelsTags: [String]
-    let nutriments: Nutriments
-    let nutriscore: [String: Nutriscore]
-    let nutriscore2021_Tags, nutriscore2023_Tags: [String]
-    let nutriscoreData: NutriscoreData
-    let nutriscoreGrade: String
-    let nutriscoreScore, nutriscoreScoreOpposite: Int
-    let nutriscoreTags: [String]
-    let nutriscoreVersion, nutritionData, nutritionDataPer, nutritionDataPrepared: String
-    let nutritionDataPreparedPer, nutritionGradeFr, nutritionGrades: String
-    let nutritionGradesTags: [String]
-    let nutritionScoreBeverage: Int
-    let nutritionScoreDebug: String
-    let nutritionScoreWarningFruitsVegetablesLegumesEstimateFromIngredients, nutritionScoreWarningFruitsVegetablesLegumesEstimateFromIngredientsValue, nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredients, nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue: Int
-    let origin, originDe, originEn, originFr: String
-    let origins: String
-    let originsHierarchy: [String]
-    let originsLc, originsOld: String
-    let originsTags: [String]
-    let otherNutritionalSubstancesTags: [JSONAny]
-    let packaging: String
-    let packagingHierarchy: [String]
-    let packagingLc: String
-    let packagingMaterialsTags: [String]
-    let packagingOld, packagingOldBeforeTaxonomization: String
-    let packagingRecyclingTags: [JSONAny]
-    let packagingShapesTags, packagingTags: [String]
-    let packagingText, packagingTextDe, packagingTextEn, packagingTextFr: String
-    let packagings: [ProductPackaging]
-    let packagingsComplete: Int
-    let packagingsMaterials: PackagingsMaterials
-    let packagingsN: Int
-    let photographersTags: [Creator]
-    let pnnsGroups1: String
-    let pnnsGroups1_Tags: [String]
-    let pnnsGroups2: String
-    let pnnsGroups2_Tags: [String]
-    let popularityKey: Int
-    let popularityTags: [String]
-    let productName, productNameDe, productNameEn, productNameFr: String
-    let productQuantity, purchasePlaces: String
-    let purchasePlacesTags: [String]
-    let quantity: String
-    let removedCountriesTags: [JSONAny]
-    let rev, scansN: Int
-    let selectedImages: SelectedImages
-    let servingSize: String
-    let sortkey: Int
-    let states: String
-    let statesHierarchy, statesTags: [String]
-    let stores: String
-    let storesTags: [String]
-    let traces, tracesFromIngredients, tracesFromUser: String
-    let tracesHierarchy: [JSONAny]
-    let tracesLc: String
-    let tracesTags: [JSONAny]
-    let uniqueScansN, unknownIngredientsN: Int
-    let unknownNutrientsTags: [JSONAny]
-    let updateKey: String
-    let vitaminsPrevTags, vitaminsTags, weighersTags: [JSONAny]
-    let withNonNutritiveSweeteners, withSweeteners: Int
+    let id: String?
+    let keywords: [String]?
+    let addedCountriesTags, additivesDebugTags: [JSONAny]?
+    let additivesN, additivesOldN: Int?
+    let additivesOldTags, additivesOriginalTags, additivesPrevOriginalTags, additivesTags: [JSONAny]?
+    let allergens, allergensFromIngredients, allergensFromUser: String?
+    let allergensHierarchy: [String]?
+    let allergensLc: String?
+    let allergensTags: [String]?
+    let aminoAcidsPrevTags, aminoAcidsTags: [JSONAny]?
+    let brands: String?
+    let brandsTags: [String]?
+    let carbonFootprintPercentOfKnownIngredients: Double?
+    let categories: String?
+    let categoriesHierarchy: [String]?
+    let categoriesLc, categoriesOld: String?
+    let categoriesProperties: CategoriesProperties?
+    let categoriesPropertiesTags, categoriesTags: [String]?
+    let categoryProperties: CategoryProperties?
+    let checkersTags: [JSONAny]?
+    let ciqualFoodNameTags: [String]?
+    let citiesTags: [JSONAny]?
+    let code: String?
+    let codesTags: [String]?
+    let comparedToCategory: String?
+    let complete, completedT, completeness: Int?
+    let conservationConditions, conservationConditionsFr: String?
+    let correctorsTags: [String]?
+    let countries, countriesBeforescanbot: String?
+    let countriesHierarchy: [String]?
+    let countriesLc: String?
+    let countriesTags: [String]?
+    let createdT: Int?
+    let creator: String?
+    let dataQualityBugsTags: [JSONAny]?
+    let dataQualityErrorsTags, dataQualityInfoTags, dataQualityTags, dataQualityWarningsTags: [String]?
+    let dataSources: String?
+    let dataSourcesTags, debugParamSortedLangs: [String]?
+    let ecoscoreData: EcoscoreData?
+    let ecoscoreGrade: EcoscoreGrade?
+    let ecoscoreScore: Int?
+    let ecoscoreTags: [EcoscoreGrade]?
+    let editorsTags: [String]?
+    let embCodes, embCodesOrig: String?
+    let embCodesTags: [JSONAny]?
+    let entryDatesTags: [String]?
+    let environmentImpactLevel: String?
+    let environmentImpactLevelTags: [JSONAny]?
+    let expirationDate: String?
+    let foodGroupsTags: [JSONAny]?
+    let genericName, genericNameFr: String?
+    let grades: Grades?
+    let productid: String?
+    let imageFrontSmallurl, imageFrontThumburl, imageFronturl, imageIngredientsSmallurl: String?
+    let imageIngredientsThumburl, imageIngredientsurl, imageNutritionSmallurl, imageNutritionThumburl: String?
+    let imageNutritionurl, imagePackagingSmallurl, imagePackagingThumburl, imagePackagingurl: String?
+    let imageSmallurl, imageThumburl, imageurl: String?
+    let images: Images?
+    let informersTags: [String]?
+    let ingredients: [Ingredient]?
+    let ingredientsAnalysis: Grades?
+    let ingredientsAnalysisTags, ingredientsDebug: [String]?
+    let ingredientsFromOrThatMayBeFromPalmOilN, ingredientsFromPalmOilN: Int?
+    let ingredientsFromPalmOilTags: [JSONAny]?
+    let ingredientsHierarchy, ingredientsidsDebug: [String]?
+    let ingredientsLc: String?
+    let ingredientsN: Int?
+    let ingredientsNTags, ingredientsOriginalTags: [String]?
+    let ingredientsPercentAnalysis: Int?
+    let ingredientsTags: [String]?
+    let ingredientsText, ingredientsTextDebug, ingredientsTextFr, ingredientsTextWithAllergens: String?
+    let ingredientsTextWithAllergensFr: String?
+    let ingredientsThatMayBeFromPalmOilN: Int?
+    let ingredientsThatMayBeFromPalmOilTags: [JSONAny]?
+    let ingredientsWithSpecifiedPercentN, ingredientsWithSpecifiedPercentSum, ingredientsWithUnspecifiedPercentN, ingredientsWithUnspecifiedPercentSum: Int?
+    let ingredientsWithoutCiqualCodes: [JSONAny]?
+    let ingredientsWithoutCiqualCodesN: Int?
+    let interfaceVersionCreated, interfaceVersionModified: String?
+    let knownIngredientsN: Int?
+    let labels: String?
+    let labelsHierarchy: [String]?
+    let labelsLc, labelsOld: String?
+    let labelsTags: [String]?
+    let lang: String?
+    let languages: Languages?
+    let languagesCodes: LanguagesCodes?
+    let languagesHierarchy, languagesTags, lastEditDatesTags: [String]?
+    let lastEditor: String?
+    let lastImageDatesTags: [String]?
+    let lastImageT: Int?
+    let lastModifiedBy: String?
+    let lastModifiedT, lastUpdatedT: Int?
+    let lc: String?
+    let link: String?
+    let mainCountriesTags: [JSONAny]?
+    let manufacturingPlaces: String?
+    let manufacturingPlacesTags: [String]?
+    let maxImgid: String?
+    let mineralsPrevTags, mineralsTags: [JSONAny]?
+    let miscTags: [String]?
+    let noNutritionData: String?
+    let novaGroup: Int?
+    let novaGroupDebug, novaGroups: String?
+    let novaGroupsMarkers: Grades?
+    let novaGroupsTags: [String]?
+    let nucleotidesPrevTags, nucleotidesTags: [JSONAny]?
+    let nutrientLevels: Grades?
+    let nutrientLevelsTags: [JSONAny]?
+    let nutriments: Nutriments?
+    let nutrimentsEstimated: [String: Double]?
+    let nutriscore: [String: Nutriscore]?
+    let nutriscore2021_Tags, nutriscore2023_Tags: [String]?
+    let nutriscoreGrade, nutriscoreGradeProducer: String?
+    let nutriscoreTags: [String]?
+    let nutriscoreVersion, nutritionData, nutritionDataPer, nutritionDataPrepared: String?
+    let nutritionDataPreparedPer, nutritionGradeFr, nutritionGrades: String?
+    let nutritionGradesTags: [String]?
+    let nutritionScoreBeverage: Int?
+    let nutritionScoreDebug: String?
+    let nutritionScoreWarningFruitsVegetablesLegumesEstimateFromIngredients, nutritionScoreWarningFruitsVegetablesLegumesEstimateFromIngredientsValue, nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredients, nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue: Int?
+    let obsolete, obsoleteSinceDate, origin, originFr: String?
+    let origins: String?
+    let originsHierarchy: [String]?
+    let originsLc, originsOld: String?
+    let originsTags: [String]?
+    let otherNutritionalSubstancesTags: [JSONAny]?
+    let owner: String?
+    let ownerFields: [String: Int]?
+    let ownersTags, packaging: String?
+    let packagingHierarchy: [String]?
+    let packagingLc: String?
+    let packagingMaterialsTags: [String]?
+    let packagingOld, packagingOldBeforeTaxonomization: String?
+    let packagingRecyclingTags, packagingShapesTags, packagingTags: [String]?
+    let packagingText, packagingTextFr: String?
+    let packagings: [ProductPackaging]?
+    let packagingsComplete: Int?
+    let packagingsMaterials: PackagingsMaterials?
+    let packagingsN: Int?
+    let photographersTags: [String]?
+    let pnnsGroups1: String?
+    let pnnsGroups1_Tags: [String]?
+    let pnnsGroups2: String?
+    let pnnsGroups2_Tags: [String]?
+    let popularityKey: Int?
+    let popularityTags: [String]?
+    let preparation, preparationFr, productName: String?
+    let productNameDebugTags: [JSONAny]?
+    let productNameFr, productQuantity, productQuantityUnit, purchasePlaces: String?
+    let purchasePlacesTags: [String]?
+    let quantity: String?
+    let removedCountriesTags: [JSONAny]?
+    let rev, scansN: Int?
+    let scores: Grades?
+    let selectedImages: SelectedImages?
+    let servingSize: String?
+    let sortkey: Int?
+    let sources: [Source]?
+    let states: String?
+    let statesHierarchy, statesTags: [String]?
+    let stores: String?
+    let storesTags: [String]?
+    let teams: String?
+    let teamsTags: [String]?
+    let traces, tracesFromIngredients, tracesFromUser: String?
+    let tracesHierarchy: [JSONAny]?
+    let tracesLc: String?
+    let tracesTags: [JSONAny]?
+    let uniqueScansN, unknownIngredientsN: Int?
+    let unknownNutrientsTags: [JSONAny]?
+    let updateKey: String?
+    let vitaminsPrevTags, vitaminsTags, weighersTags, weightersTags: [JSONAny]?
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -212,6 +216,7 @@ struct Product: Codable {
         case aminoAcidsTags = "amino_acids_tags"
         case brands
         case brandsTags = "brands_tags"
+        case carbonFootprintPercentOfKnownIngredients = "carbon_footprint_percent_of_known_ingredients"
         case categories
         case categoriesHierarchy = "categories_hierarchy"
         case categoriesLc = "categories_lc"
@@ -229,6 +234,8 @@ struct Product: Codable {
         case complete
         case completedT = "completed_t"
         case completeness
+        case conservationConditions = "conservation_conditions"
+        case conservationConditionsFr = "conservation_conditions_fr"
         case correctorsTags = "correctors_tags"
         case countries
         case countriesBeforescanbot = "countries_beforescanbot"
@@ -247,35 +254,36 @@ struct Product: Codable {
         case debugParamSortedLangs = "debug_param_sorted_langs"
         case ecoscoreData = "ecoscore_data"
         case ecoscoreGrade = "ecoscore_grade"
+        case ecoscoreScore = "ecoscore_score"
         case ecoscoreTags = "ecoscore_tags"
         case editorsTags = "editors_tags"
         case embCodes = "emb_codes"
         case embCodesOrig = "emb_codes_orig"
         case embCodesTags = "emb_codes_tags"
         case entryDatesTags = "entry_dates_tags"
+        case environmentImpactLevel = "environment_impact_level"
+        case environmentImpactLevelTags = "environment_impact_level_tags"
         case expirationDate = "expiration_date"
-        case foodGroups = "food_groups"
         case foodGroupsTags = "food_groups_tags"
         case genericName = "generic_name"
-        case genericNameDe = "generic_name_de"
-        case genericNameEn = "generic_name_en"
         case genericNameFr = "generic_name_fr"
-        case productID = "id"
-        case imageFrontSmallURL = "image_front_small_url"
-        case imageFrontThumbURL = "image_front_thumb_url"
-        case imageFrontURL = "image_front_url"
-        case imageIngredientsSmallURL = "image_ingredients_small_url"
-        case imageIngredientsThumbURL = "image_ingredients_thumb_url"
-        case imageIngredientsURL = "image_ingredients_url"
-        case imageNutritionSmallURL = "image_nutrition_small_url"
-        case imageNutritionThumbURL = "image_nutrition_thumb_url"
-        case imageNutritionURL = "image_nutrition_url"
-        case imagePackagingSmallURL = "image_packaging_small_url"
-        case imagePackagingThumbURL = "image_packaging_thumb_url"
-        case imagePackagingURL = "image_packaging_url"
-        case imageSmallURL = "image_small_url"
-        case imageThumbURL = "image_thumb_url"
-        case imageURL = "image_url"
+        case grades
+        case productid = "id"
+        case imageFrontSmallurl = "image_front_small_url"
+        case imageFrontThumburl = "image_front_thumb_url"
+        case imageFronturl = "image_front_url"
+        case imageIngredientsSmallurl = "image_ingredients_small_url"
+        case imageIngredientsThumburl = "image_ingredients_thumb_url"
+        case imageIngredientsurl = "image_ingredients_url"
+        case imageNutritionSmallurl = "image_nutrition_small_url"
+        case imageNutritionThumburl = "image_nutrition_thumb_url"
+        case imageNutritionurl = "image_nutrition_url"
+        case imagePackagingSmallurl = "image_packaging_small_url"
+        case imagePackagingThumburl = "image_packaging_thumb_url"
+        case imagePackagingurl = "image_packaging_url"
+        case imageSmallurl = "image_small_url"
+        case imageThumburl = "image_thumb_url"
+        case imageurl = "image_url"
         case images
         case informersTags = "informers_tags"
         case ingredients
@@ -286,7 +294,7 @@ struct Product: Codable {
         case ingredientsFromPalmOilN = "ingredients_from_palm_oil_n"
         case ingredientsFromPalmOilTags = "ingredients_from_palm_oil_tags"
         case ingredientsHierarchy = "ingredients_hierarchy"
-        case ingredientsIDSDebug = "ingredients_ids_debug"
+        case ingredientsidsDebug = "ingredients_ids_debug"
         case ingredientsLc = "ingredients_lc"
         case ingredientsN = "ingredients_n"
         case ingredientsNTags = "ingredients_n_tags"
@@ -294,13 +302,9 @@ struct Product: Codable {
         case ingredientsPercentAnalysis = "ingredients_percent_analysis"
         case ingredientsTags = "ingredients_tags"
         case ingredientsText = "ingredients_text"
-        case ingredientsTextDe = "ingredients_text_de"
         case ingredientsTextDebug = "ingredients_text_debug"
-        case ingredientsTextEn = "ingredients_text_en"
         case ingredientsTextFr = "ingredients_text_fr"
         case ingredientsTextWithAllergens = "ingredients_text_with_allergens"
-        case ingredientsTextWithAllergensDe = "ingredients_text_with_allergens_de"
-        case ingredientsTextWithAllergensEn = "ingredients_text_with_allergens_en"
         case ingredientsTextWithAllergensFr = "ingredients_text_with_allergens_fr"
         case ingredientsThatMayBeFromPalmOilN = "ingredients_that_may_be_from_palm_oil_n"
         case ingredientsThatMayBeFromPalmOilTags = "ingredients_that_may_be_from_palm_oil_tags"
@@ -347,13 +351,13 @@ struct Product: Codable {
         case nucleotidesTags = "nucleotides_tags"
         case nutrientLevels = "nutrient_levels"
         case nutrientLevelsTags = "nutrient_levels_tags"
-        case nutriments, nutriscore
+        case nutriments
+        case nutrimentsEstimated = "nutriments_estimated"
+        case nutriscore
         case nutriscore2021_Tags = "nutriscore_2021_tags"
         case nutriscore2023_Tags = "nutriscore_2023_tags"
-        case nutriscoreData = "nutriscore_data"
         case nutriscoreGrade = "nutriscore_grade"
-        case nutriscoreScore = "nutriscore_score"
-        case nutriscoreScoreOpposite = "nutriscore_score_opposite"
+        case nutriscoreGradeProducer = "nutriscore_grade_producer"
         case nutriscoreTags = "nutriscore_tags"
         case nutriscoreVersion = "nutriscore_version"
         case nutritionData = "nutrition_data"
@@ -369,9 +373,9 @@ struct Product: Codable {
         case nutritionScoreWarningFruitsVegetablesLegumesEstimateFromIngredientsValue = "nutrition_score_warning_fruits_vegetables_legumes_estimate_from_ingredients_value"
         case nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredients = "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients"
         case nutritionScoreWarningFruitsVegetablesNutsEstimateFromIngredientsValue = "nutrition_score_warning_fruits_vegetables_nuts_estimate_from_ingredients_value"
+        case obsolete
+        case obsoleteSinceDate = "obsolete_since_date"
         case origin
-        case originDe = "origin_de"
-        case originEn = "origin_en"
         case originFr = "origin_fr"
         case origins
         case originsHierarchy = "origins_hierarchy"
@@ -379,6 +383,9 @@ struct Product: Codable {
         case originsOld = "origins_old"
         case originsTags = "origins_tags"
         case otherNutritionalSubstancesTags = "other_nutritional_substances_tags"
+        case owner
+        case ownerFields = "owner_fields"
+        case ownersTags = "owners_tags"
         case packaging
         case packagingHierarchy = "packaging_hierarchy"
         case packagingLc = "packaging_lc"
@@ -389,8 +396,6 @@ struct Product: Codable {
         case packagingShapesTags = "packaging_shapes_tags"
         case packagingTags = "packaging_tags"
         case packagingText = "packaging_text"
-        case packagingTextDe = "packaging_text_de"
-        case packagingTextEn = "packaging_text_en"
         case packagingTextFr = "packaging_text_fr"
         case packagings
         case packagingsComplete = "packagings_complete"
@@ -403,24 +408,29 @@ struct Product: Codable {
         case pnnsGroups2_Tags = "pnns_groups_2_tags"
         case popularityKey = "popularity_key"
         case popularityTags = "popularity_tags"
+        case preparation
+        case preparationFr = "preparation_fr"
         case productName = "product_name"
-        case productNameDe = "product_name_de"
-        case productNameEn = "product_name_en"
+        case productNameDebugTags = "product_name_debug_tags"
         case productNameFr = "product_name_fr"
         case productQuantity = "product_quantity"
+        case productQuantityUnit = "product_quantity_unit"
         case purchasePlaces = "purchase_places"
         case purchasePlacesTags = "purchase_places_tags"
         case quantity
         case removedCountriesTags = "removed_countries_tags"
         case rev
         case scansN = "scans_n"
+        case scores
         case selectedImages = "selected_images"
         case servingSize = "serving_size"
-        case sortkey, states
+        case sortkey, sources, states
         case statesHierarchy = "states_hierarchy"
         case statesTags = "states_tags"
         case stores
         case storesTags = "stores_tags"
+        case teams
+        case teamsTags = "teams_tags"
         case traces
         case tracesFromIngredients = "traces_from_ingredients"
         case tracesFromUser = "traces_from_user"
@@ -434,25 +444,23 @@ struct Product: Codable {
         case vitaminsPrevTags = "vitamins_prev_tags"
         case vitaminsTags = "vitamins_tags"
         case weighersTags = "weighers_tags"
-        case withNonNutritiveSweeteners = "with_non_nutritive_sweeteners"
-        case withSweeteners = "with_sweeteners"
+        case weightersTags = "weighters_tags"
     }
 }
 
 // MARK: - CategoriesProperties
 struct CategoriesProperties: Codable {
-    let agribalyseFoodCodeEn, agribalyseProxyFoodCodeEn, ciqualFoodCodeEn: String
+    let agribalyseFoodCodeEn, ciqualFoodCodeEn: String?
 
     enum CodingKeys: String, CodingKey {
         case agribalyseFoodCodeEn = "agribalyse_food_code:en"
-        case agribalyseProxyFoodCodeEn = "agribalyse_proxy_food_code:en"
         case ciqualFoodCodeEn = "ciqual_food_code:en"
     }
 }
 
 // MARK: - CategoryProperties
 struct CategoryProperties: Codable {
-    let ciqualFoodNameEn, ciqualFoodNameFr: String
+    let ciqualFoodNameEn, ciqualFoodNameFr: String?
 
     enum CodingKeys: String, CodingKey {
         case ciqualFoodNameEn = "ciqual_food_name:en"
@@ -460,35 +468,33 @@ struct CategoryProperties: Codable {
     }
 }
 
-enum Creator: String, Codable {
-    case geokie = "geokie"
-    case kch = "kch"
-    case kiliweb = "kiliweb"
-    case openfoodfactsContributors = "openfoodfacts-contributors"
-    case waupline = "waupline"
-}
-
 // MARK: - EcoscoreData
 struct EcoscoreData: Codable {
-    let adjustments: Adjustments
-    let ecoscoreNotApplicableForCategory: String
-    let missing: Missing
-    let scores: Scores
-    let status: String
+    let adjustments: Adjustments?
+    let agribalyse: EcoscoreDataAgribalyse?
+    let grade: EcoscoreGrade?
+    let grades: [String: EcoscoreGrade]?
+    let missing: Missing?
+    let missingDataWarning: Int?
+    let previousData: PreviousData?
+    let score: Int?
+    let scores: [String: Int]?
+    let status: String?
 
     enum CodingKeys: String, CodingKey {
-        case adjustments
-        case ecoscoreNotApplicableForCategory = "ecoscore_not_applicable_for_category"
-        case missing, scores, status
+        case adjustments, agribalyse, grade, grades, missing
+        case missingDataWarning = "missing_data_warning"
+        case previousData = "previous_data"
+        case score, scores, status
     }
 }
 
 // MARK: - Adjustments
 struct Adjustments: Codable {
-    let originsOfIngredients: OriginsOfIngredients
-    let packaging: AdjustmentsPackaging
-    let productionSystem: ProductionSystem
-    let threatenedSpecies: Scores
+    let originsOfIngredients: OriginsOfIngredients?
+    let packaging: AdjustmentsPackaging?
+    let productionSystem: ProductionSystem?
+    let threatenedSpecies: Grades?
 
     enum CodingKeys: String, CodingKey {
         case originsOfIngredients = "origins_of_ingredients"
@@ -500,15 +506,15 @@ struct Adjustments: Codable {
 
 // MARK: - OriginsOfIngredients
 struct OriginsOfIngredients: Codable {
-    let aggregatedOrigins: [AggregatedOrigin]
-    let epiScore, epiValue: Int
-    let originsFromCategories, originsFromOriginsField: [String]
-    let transportationScore: Int
-    let transportationScores: [String: Int]
-    let transportationValue: Int
-    let transportationValues: [String: Int]
-    let value: Int
-    let values: [String: Int]
+    let aggregatedOrigins: [AggregatedOrigin]?
+    let epiScore, epiValue: Int?
+    let originsFromCategories, originsFromOriginsField: [String]?
+    let transportationScore: Int?
+    let transportationScores: [String: Int]?
+    let transportationValue: Int?
+    let transportationValues: [String: Int]?
+    let value: Int?
+    let values: [String: Int]?
 
     enum CodingKeys: String, CodingKey {
         case aggregatedOrigins = "aggregated_origins"
@@ -526,8 +532,8 @@ struct OriginsOfIngredients: Codable {
 
 // MARK: - AggregatedOrigin
 struct AggregatedOrigin: Codable {
-    let epiScore, origin: String
-    let percent: Int
+    let epiScore, origin: String?
+    let percent: Int?
     let transportationScore: JSONNull?
 
     enum CodingKeys: String, CodingKey {
@@ -539,10 +545,11 @@ struct AggregatedOrigin: Codable {
 
 // MARK: - AdjustmentsPackaging
 struct AdjustmentsPackaging: Codable {
-    let nonRecyclableAndNonBiodegradableMaterials: Int
-    let packagings: [PackagingPackaging]
-    let score, value: Int
-    let warning: String
+    let nonRecyclableAndNonBiodegradableMaterials: Int?
+    let packagings: [PackagingPackaging]?
+    let score: Double?
+    let value: Int?
+    let warning: String?
 
     enum CodingKeys: String, CodingKey {
         case nonRecyclableAndNonBiodegradableMaterials = "non_recyclable_and_non_biodegradable_materials"
@@ -552,63 +559,147 @@ struct AdjustmentsPackaging: Codable {
 
 // MARK: - PackagingPackaging
 struct PackagingPackaging: Codable {
-    let ecoscoreMaterialScore: Int
-    let ecoscoreShapeRatio: Double
-    let material: String
-    let nonRecyclableAndNonBiodegradable: String?
-    let shape: String
+    let ecoscoreMaterialScore: Int?
+    let ecoscoreShapeRatio: Double?
+    let material: String?
+    let numberOfUnits: Int?
+    let recycling, shape, nonRecyclableAndNonBiodegradable: String?
 
     enum CodingKeys: String, CodingKey {
         case ecoscoreMaterialScore = "ecoscore_material_score"
         case ecoscoreShapeRatio = "ecoscore_shape_ratio"
         case material
+        case numberOfUnits = "number_of_units"
+        case recycling, shape
         case nonRecyclableAndNonBiodegradable = "non_recyclable_and_non_biodegradable"
-        case shape
     }
 }
 
 // MARK: - ProductionSystem
 struct ProductionSystem: Codable {
-    let labels: [JSONAny]
-    let value: Int
-    let warning: String
+    let labels: [String]?
+    let value: Int?
 }
 
-// MARK: - Scores
-struct Scores: Codable {
+// MARK: - Grades
+struct Grades: Codable {
+}
+
+// MARK: - EcoscoreDataAgribalyse
+struct EcoscoreDataAgribalyse: Codable {
+    let agribalyseFoodCode: String?
+    let co2Agriculture, co2Consumption, co2Distribution, co2Packaging: Double?
+    let co2Processing, co2Total, co2Transportation: Double?
+    let code, dqr: String?
+    let efAgriculture, efConsumption, efDistribution, efPackaging: Double?
+    let efProcessing, efTotal, efTransportation: Double?
+    let isBeverage: Int?
+    let nameEn, nameFr: String?
+    let score: Int?
+    let version: String?
+
+    enum CodingKeys: String, CodingKey {
+        case agribalyseFoodCode = "agribalyse_food_code"
+        case co2Agriculture = "co2_agriculture"
+        case co2Consumption = "co2_consumption"
+        case co2Distribution = "co2_distribution"
+        case co2Packaging = "co2_packaging"
+        case co2Processing = "co2_processing"
+        case co2Total = "co2_total"
+        case co2Transportation = "co2_transportation"
+        case code, dqr
+        case efAgriculture = "ef_agriculture"
+        case efConsumption = "ef_consumption"
+        case efDistribution = "ef_distribution"
+        case efPackaging = "ef_packaging"
+        case efProcessing = "ef_processing"
+        case efTotal = "ef_total"
+        case efTransportation = "ef_transportation"
+        case isBeverage = "is_beverage"
+        case nameEn = "name_en"
+        case nameFr = "name_fr"
+        case score, version
+    }
+}
+
+enum EcoscoreGrade: String, Codable {
+    case a = "a"
 }
 
 // MARK: - Missing
 struct Missing: Codable {
-    let labels, packagings: Int
+    let packagings: Int?
+}
+
+// MARK: - PreviousData
+struct PreviousData: Codable {
+    let agribalyse: PreviousDataAgribalyse?
+    let grade: String?
+    let score: Int?
+}
+
+// MARK: - PreviousDataAgribalyse
+struct PreviousDataAgribalyse: Codable {
+    let agribalyseFoodCode: String?
+    let co2Agriculture: Double?
+    let co2Consumption: Int?
+    let co2Distribution, co2Packaging, co2Processing, co2Total: Double?
+    let co2Transportation: Double?
+    let code, dqr: String?
+    let efAgriculture: Double?
+    let efConsumption: Int?
+    let efDistribution, efPackaging, efProcessing, efTotal: Double?
+    let efTransportation: Double?
+    let isBeverage: Int?
+    let nameEn, nameFr: String?
+    let score: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case agribalyseFoodCode = "agribalyse_food_code"
+        case co2Agriculture = "co2_agriculture"
+        case co2Consumption = "co2_consumption"
+        case co2Distribution = "co2_distribution"
+        case co2Packaging = "co2_packaging"
+        case co2Processing = "co2_processing"
+        case co2Total = "co2_total"
+        case co2Transportation = "co2_transportation"
+        case code, dqr
+        case efAgriculture = "ef_agriculture"
+        case efConsumption = "ef_consumption"
+        case efDistribution = "ef_distribution"
+        case efPackaging = "ef_packaging"
+        case efProcessing = "ef_processing"
+        case efTotal = "ef_total"
+        case efTransportation = "ef_transportation"
+        case isBeverage = "is_beverage"
+        case nameEn = "name_en"
+        case nameFr = "name_fr"
+        case score
+    }
 }
 
 // MARK: - Images
 struct Images: Codable {
-    let the1, the2, the3, the4: The1
-    let the5, the6, the8, the9: The1
-    let the10, the11, the12, the14: The1
-    let the15, the16, the17, the18: The1
-    let the19, the20, the21, the22: The1
-    let the23, the24, the25, the26: The1
-    let the27, the28, the29, the30: The1
-    let the31, the32: The1
-    let frontFr, ingredientsFr: Fr
-    let nutritionDe: NutritionDe
-    let nutritionFr, packagingFr: Fr
+    let the1, the2: The1?
+    let the9, the10, the11, the12: The10?
+    let the13, the14, the15, the16: The10?
+    let the17, the18, the19, the20: The10?
+    let the21, the22, the23, the24: The10?
+    let the25, the26, the27, the28: The10?
+    let the29, the30, the31, the32: The10?
+    let the33, the34, the35: The10?
+    let frontFr: FrontFr?
+    let ingredientsFr: IngredientsFr?
+    let nutritionFr, packagingFr: Fr?
 
     enum CodingKeys: String, CodingKey {
         case the1 = "1"
         case the2 = "2"
-        case the3 = "3"
-        case the4 = "4"
-        case the5 = "5"
-        case the6 = "6"
-        case the8 = "8"
         case the9 = "9"
         case the10 = "10"
         case the11 = "11"
         case the12 = "12"
+        case the13 = "13"
         case the14 = "14"
         case the15 = "15"
         case the16 = "16"
@@ -628,21 +719,23 @@ struct Images: Codable {
         case the30 = "30"
         case the31 = "31"
         case the32 = "32"
+        case the33 = "33"
+        case the34 = "34"
+        case the35 = "35"
         case frontFr = "front_fr"
         case ingredientsFr = "ingredients_fr"
-        case nutritionDe = "nutrition_de"
         case nutritionFr = "nutrition_fr"
         case packagingFr = "packaging_fr"
     }
 }
 
-// MARK: - Fr
-struct Fr: Codable {
-    let angle, coordinatesImageSize, geometry, imgid: String
-    let normalize, rev: String
-    let sizes: Sizes
-    let whiteMagic, x1, x2, y1: String
-    let y2: String
+// MARK: - FrontFr
+struct FrontFr: Codable {
+    let angle, coordinatesImageSize, geometry, imgid: String?
+    let normalize, rev: String?
+    let sizes: FrontFrSizes?
+    let whiteMagic, x1, x2, y1: String?
+    let y2: String?
 
     enum CodingKeys: String, CodingKey {
         case angle
@@ -653,37 +746,55 @@ struct Fr: Codable {
     }
 }
 
-// MARK: - Sizes
-struct Sizes: Codable {
-    let the100, the400, full: The100
-    let the200: The100?
+// MARK: - FrontFrSizes
+struct FrontFrSizes: Codable {
+    let the100, the200, the400, full: The100?
 
     enum CodingKeys: String, CodingKey {
         case the100 = "100"
+        case the200 = "200"
         case the400 = "400"
         case full
-        case the200 = "200"
     }
 }
 
 // MARK: - The100
 struct The100: Codable {
-    let h, w: Int
+    let h, w: Int?
 }
 
-// MARK: - NutritionDe
-struct NutritionDe: Codable {
-    let angle: Int
-    let geometry, imgid: String
+// MARK: - IngredientsFr
+struct IngredientsFr: Codable {
+    let angle, coordinatesImageSize, geometry, imgid: String?
     let normalize: JSONNull?
-    let ocr: Int
-    let orientation, rev: String
-    let sizes: Sizes
+    let rev: String?
+    let sizes: FrontFrSizes?
     let whiteMagic: JSONNull?
-    let x1, x2, y1, y2: String
+    let x1, x2, y1, y2: String?
 
     enum CodingKeys: String, CodingKey {
-        case angle, geometry, imgid, normalize, ocr, orientation, rev, sizes
+        case angle
+        case coordinatesImageSize = "coordinates_image_size"
+        case geometry, imgid, normalize, rev, sizes
+        case whiteMagic = "white_magic"
+        case x1, x2, y1, y2
+    }
+}
+
+// MARK: - Fr
+struct Fr: Codable {
+    let angle: Int?
+    let coordinatesImageSize, geometry, imgid: String?
+    let normalize: JSONNull?
+    let rev: String?
+    let sizes: FrontFrSizes?
+    let whiteMagic: JSONNull?
+    let x1, x2, y1, y2: String?
+
+    enum CodingKeys: String, CodingKey {
+        case angle
+        case coordinatesImageSize = "coordinates_image_size"
+        case geometry, imgid, normalize, rev, sizes
         case whiteMagic = "white_magic"
         case x1, x2, y1, y2
     }
@@ -691,9 +802,32 @@ struct NutritionDe: Codable {
 
 // MARK: - The1
 struct The1: Codable {
-    let sizes: Sizes
-    let uploadedT: Int
-    let uploader: Creator
+    let sizes: The1_Sizes?
+    let uploadedT, uploader: String?
+
+    enum CodingKeys: String, CodingKey {
+        case sizes
+        case uploadedT = "uploaded_t"
+        case uploader
+    }
+}
+
+// MARK: - The1_Sizes
+struct The1_Sizes: Codable {
+    let the100, the400, full: The100?
+
+    enum CodingKeys: String, CodingKey {
+        case the100 = "100"
+        case the400 = "400"
+        case full
+    }
+}
+
+// MARK: - The10
+struct The10: Codable {
+    let sizes: The1_Sizes?
+    let uploadedT: Int?
+    let uploader: String?
 
     enum CodingKeys: String, CodingKey {
         case sizes
@@ -704,147 +838,112 @@ struct The1: Codable {
 
 // MARK: - Ingredient
 struct Ingredient: Codable {
-    let id: String
-    let labels: String?
-    let percentEstimate: Double
-    let percentMax: PercentMax
-    let percentMin: Int
-    let rank: Int?
-    let text: String
-    let vegan, vegetarian, hasSubIngredients: String?
+    let ciqualFoodCode, id: String?
+    let percentEstimate, percentMax, percentMin, rank: Int?
+    let text, vegan, vegetarian: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, labels
+        case ciqualFoodCode = "ciqual_food_code"
+        case id
         case percentEstimate = "percent_estimate"
         case percentMax = "percent_max"
         case percentMin = "percent_min"
         case rank, text, vegan, vegetarian
-        case hasSubIngredients = "has_sub_ingredients"
-    }
-}
-
-enum PercentMax: Codable {
-    case double(Double)
-    case string(String)
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let x = try? container.decode(Double.self) {
-            self = .double(x)
-            return
-        }
-        if let x = try? container.decode(String.self) {
-            self = .string(x)
-            return
-        }
-        throw DecodingError.typeMismatch(PercentMax.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for PercentMax"))
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .double(let x):
-            try container.encode(x)
-        case .string(let x):
-            try container.encode(x)
-        }
-    }
-}
-
-// MARK: - IngredientsAnalysis
-struct IngredientsAnalysis: Codable {
-    let enPalmOilContentUnknown, enVeganStatusUnknown, enVegetarianStatusUnknown: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case enPalmOilContentUnknown = "en:palm-oil-content-unknown"
-        case enVeganStatusUnknown = "en:vegan-status-unknown"
-        case enVegetarianStatusUnknown = "en:vegetarian-status-unknown"
     }
 }
 
 // MARK: - Languages
 struct Languages: Codable {
-    let enEnglish, enFrench, enGerman: Int
+    let enFrench: Int?
 
     enum CodingKeys: String, CodingKey {
-        case enEnglish = "en:english"
         case enFrench = "en:french"
-        case enGerman = "en:german"
     }
 }
 
 // MARK: - LanguagesCodes
 struct LanguagesCodes: Codable {
-    let de, en, fr: Int
-}
-
-// MARK: - NutrientLevels
-struct NutrientLevels: Codable {
-    let fat, salt, saturatedFat, sugars: String
-
-    enum CodingKeys: String, CodingKey {
-        case fat, salt
-        case saturatedFat = "saturated-fat"
-        case sugars
-    }
+    let fr: Int?
 }
 
 // MARK: - Nutriments
 struct Nutriments: Codable {
-    let carbohydrates, carbohydrates100G: Int
-    let carbohydratesUnit: String
-    let carbohydratesValue: Int
-    let energy, energyKcal, energyKcal100G: Double
-    let energyKcalPrepared, energyKcalPreparedServing: Int
-    let energyKcalPreparedUnit: String
-    let energyKcalPreparedValue: Int
-    let energyKcalUnit: String
-    let energyKcalValue: Double
-    let energyKcalValueComputed: Int
-    let energyKj, energyKj100G: Double
-    let energyKjPrepared, energyKjPreparedServing: Int
-    let energyKjPreparedUnit: String
-    let energyKjPreparedValue: Int
-    let energyKjUnit: String
-    let energyKjValue: Double
-    let energyKjValueComputed: Int
-    let energy100G: Double
-    let energyPrepared, energyPreparedServing: Int
-    let energyPreparedUnit: String
-    let energyPreparedValue: Int
-    let energyUnit: String
-    let energyValue: Double
-    let fat, fat100G, fatPrepared, fatPreparedServing: Int
-    let fatPreparedUnit: String
-    let fatPreparedValue: Int
-    let fatUnit: String
-    let fatValue, fruitsVegetablesLegumesEstimateFromIngredients100G, fruitsVegetablesLegumesEstimateFromIngredientsServing, fruitsVegetablesNutsEstimateFromIngredients100G: Int
-    let fruitsVegetablesNutsEstimateFromIngredientsServing, novaGroup, novaGroup100G, novaGroupServing: Int
-    let nutritionScoreFr, nutritionScoreFr100G, proteins, proteins100G: Int
-    let proteinsUnit: String
-    let proteinsValue: Int
-    let salt, salt100G, saltPrepared, saltPreparedServing: Double
-    let saltPreparedUnit: String
-    let saltPreparedValue: Double
-    let saltUnit: String
-    let saltValue: Double
-    let saturatedFat, saturatedFat100G: Int
-    let saturatedFatUnit: String
-    let saturatedFatValue: Int
-    let sodium, sodium100G, sodiumPrepared, sodiumPreparedServing: Double
-    let sodiumPreparedUnit: String
-    let sodiumPreparedValue: Double
-    let sodiumUnit: String
-    let sodiumValue: Double
-    let sugars, sugars100G: Int
-    let sugarsUnit: String
-    let sugarsValue: Int
+    let carbohydrates, carbohydrates100G: Int?
+    let carbohydratesPrepared, carbohydratesPreparedServing: Double?
+    let carbohydratesPreparedUnit: String?
+    let carbohydratesPreparedValue: Double?
+    let carbohydratesUnit: String?
+    let carbohydratesValue: Int?
+    let carbonFootprintFromKnownIngredientsProduct, carbonFootprintFromKnownIngredientsServing: Double?
+    let energy, energyKcal, energyKcal100G, energyKcalPrepared: Int?
+    let energyKcalPreparedServing: Int?
+    let energyKcalPreparedUnit: String?
+    let energyKcalPreparedValue: Int?
+    let energyKcalUnit: String?
+    let energyKcalValue: Int?
+    let energyKcalValueComputed: Double?
+    let energyKj, energyKj100G, energyKjPrepared, energyKjPreparedServing: Int?
+    let energyKjPreparedUnit: String?
+    let energyKjPreparedValue: Int?
+    let energyKjUnit: String?
+    let energyKjValue, energyKjValueComputed, energy100G, energyPrepared: Int?
+    let energyPreparedServing: Int?
+    let energyPreparedUnit: String?
+    let energyPreparedValue: Int?
+    let energyUnit: String?
+    let energyValue: Int?
+    let fat, fat100G: Double?
+    let fatPrepared, fatPreparedServing: Int?
+    let fatPreparedUnit: String?
+    let fatPreparedValue: Int?
+    let fatUnit: String?
+    let fatValue: Double?
+    let fiber, fiber100G: Int?
+    let fiberPrepared, fiberPreparedServing: Double?
+    let fiberPreparedUnit: String?
+    let fiberPreparedValue: Double?
+    let fiberUnit: String?
+    let fiberValue, fruitsVegetablesLegumesEstimateFromIngredients100G, fruitsVegetablesLegumesEstimateFromIngredientsServing, fruitsVegetablesNutsEstimateFromIngredients100G: Int?
+    let fruitsVegetablesNutsEstimateFromIngredientsServing, novaGroup, novaGroup100G, novaGroupServing: Int?
+    let proteins, proteins100G, proteinsPrepared, proteinsPreparedServing: Double?
+    let proteinsPreparedUnit: String?
+    let proteinsPreparedValue: Double?
+    let proteinsUnit: String?
+    let proteinsValue, salt, salt100G, saltPrepared: Double?
+    let saltPreparedServing: Double?
+    let saltPreparedUnit: String?
+    let saltPreparedValue: Double?
+    let saltUnit: String?
+    let saltValue, saturatedFat, saturatedFat100G: Double?
+    let saturatedFatModifier: String?
+    let saturatedFatPrepared, saturatedFatPreparedServing: Int?
+    let saturatedFatPreparedUnit: String?
+    let saturatedFatPreparedValue: Int?
+    let saturatedFatUnit: String?
+    let saturatedFatValue, sodium, sodium100G, sodiumPrepared: Double?
+    let sodiumPreparedServing: Double?
+    let sodiumPreparedUnit: String?
+    let sodiumPreparedValue: Double?
+    let sodiumUnit: String?
+    let sodiumValue: Double?
+    let sugars, sugars100G: Int?
+    let sugarsPrepared, sugarsPreparedServing: Double?
+    let sugarsPreparedUnit: String?
+    let sugarsPreparedValue: Double?
+    let sugarsUnit: String?
+    let sugarsValue: Int?
 
     enum CodingKeys: String, CodingKey {
         case carbohydrates
         case carbohydrates100G = "carbohydrates_100g"
+        case carbohydratesPrepared = "carbohydrates_prepared"
+        case carbohydratesPreparedServing = "carbohydrates_prepared_serving"
+        case carbohydratesPreparedUnit = "carbohydrates_prepared_unit"
+        case carbohydratesPreparedValue = "carbohydrates_prepared_value"
         case carbohydratesUnit = "carbohydrates_unit"
         case carbohydratesValue = "carbohydrates_value"
+        case carbonFootprintFromKnownIngredientsProduct = "carbon-footprint-from-known-ingredients_product"
+        case carbonFootprintFromKnownIngredientsServing = "carbon-footprint-from-known-ingredients_serving"
         case energy
         case energyKcal = "energy-kcal"
         case energyKcal100G = "energy-kcal_100g"
@@ -879,6 +978,14 @@ struct Nutriments: Codable {
         case fatPreparedValue = "fat_prepared_value"
         case fatUnit = "fat_unit"
         case fatValue = "fat_value"
+        case fiber
+        case fiber100G = "fiber_100g"
+        case fiberPrepared = "fiber_prepared"
+        case fiberPreparedServing = "fiber_prepared_serving"
+        case fiberPreparedUnit = "fiber_prepared_unit"
+        case fiberPreparedValue = "fiber_prepared_value"
+        case fiberUnit = "fiber_unit"
+        case fiberValue = "fiber_value"
         case fruitsVegetablesLegumesEstimateFromIngredients100G = "fruits-vegetables-legumes-estimate-from-ingredients_100g"
         case fruitsVegetablesLegumesEstimateFromIngredientsServing = "fruits-vegetables-legumes-estimate-from-ingredients_serving"
         case fruitsVegetablesNutsEstimateFromIngredients100G = "fruits-vegetables-nuts-estimate-from-ingredients_100g"
@@ -886,10 +993,12 @@ struct Nutriments: Codable {
         case novaGroup = "nova-group"
         case novaGroup100G = "nova-group_100g"
         case novaGroupServing = "nova-group_serving"
-        case nutritionScoreFr = "nutrition-score-fr"
-        case nutritionScoreFr100G = "nutrition-score-fr_100g"
         case proteins
         case proteins100G = "proteins_100g"
+        case proteinsPrepared = "proteins_prepared"
+        case proteinsPreparedServing = "proteins_prepared_serving"
+        case proteinsPreparedUnit = "proteins_prepared_unit"
+        case proteinsPreparedValue = "proteins_prepared_value"
         case proteinsUnit = "proteins_unit"
         case proteinsValue = "proteins_value"
         case salt
@@ -902,6 +1011,11 @@ struct Nutriments: Codable {
         case saltValue = "salt_value"
         case saturatedFat = "saturated-fat"
         case saturatedFat100G = "saturated-fat_100g"
+        case saturatedFatModifier = "saturated-fat_modifier"
+        case saturatedFatPrepared = "saturated-fat_prepared"
+        case saturatedFatPreparedServing = "saturated-fat_prepared_serving"
+        case saturatedFatPreparedUnit = "saturated-fat_prepared_unit"
+        case saturatedFatPreparedValue = "saturated-fat_prepared_value"
         case saturatedFatUnit = "saturated-fat_unit"
         case saturatedFatValue = "saturated-fat_value"
         case sodium
@@ -914,6 +1028,10 @@ struct Nutriments: Codable {
         case sodiumValue = "sodium_value"
         case sugars
         case sugars100G = "sugars_100g"
+        case sugarsPrepared = "sugars_prepared"
+        case sugarsPreparedServing = "sugars_prepared_serving"
+        case sugarsPreparedUnit = "sugars_prepared_unit"
+        case sugarsPreparedValue = "sugars_prepared_value"
         case sugarsUnit = "sugars_unit"
         case sugarsValue = "sugars_value"
     }
@@ -921,10 +1039,10 @@ struct Nutriments: Codable {
 
 // MARK: - Nutriscore
 struct Nutriscore: Codable {
-    let categoryAvailable: Int
-    let data: DataClass
-    let grade: String
-    let nutrientsAvailable, nutriscoreApplicable, nutriscoreComputed, score: Int
+    let categoryAvailable: Int?
+    let data: [String: Double]?
+    let grade: String?
+    let nutrientsAvailable, nutriscoreApplicable, nutriscoreComputed: Int?
 
     enum CodingKeys: String, CodingKey {
         case categoryAvailable = "category_available"
@@ -932,151 +1050,31 @@ struct Nutriscore: Codable {
         case nutrientsAvailable = "nutrients_available"
         case nutriscoreApplicable = "nutriscore_applicable"
         case nutriscoreComputed = "nutriscore_computed"
-        case score
-    }
-}
-
-// MARK: - DataClass
-struct DataClass: Codable {
-    let energy: Double?
-    let energyPoints: Int?
-    let energyValue: Double?
-    let fiber, fiberPoints, fiberValue, fruitsVegetablesNutsColzaWalnutOliveOils: Int?
-    let fruitsVegetablesNutsColzaWalnutOliveOilsPoints, fruitsVegetablesNutsColzaWalnutOliveOilsValue: Int?
-    let isBeverage, isCheese: Int
-    let isFat: Int?
-    let isWater, negativePoints, positivePoints: Int
-    let proteins, proteinsPoints, proteinsValue, saturatedFat: Int?
-    let saturatedFatPoints, saturatedFatValue, sodium, sodiumPoints: Int?
-    let sodiumValue, sugars, sugarsPoints, sugarsValue: Int?
-    let grade: String?
-    let score: Int?
-    let components: Components?
-    let countProteins: Int?
-    let countProteinsReason: String?
-    let isFatOilNutsSeeds, isRedMeatProduct, negativePointsMax, nonNutritiveSweetenersMax: Int?
-    let positiveNutrients: [String]?
-    let positivePointsMax, withNonNutritiveSweeteners: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case energy
-        case energyPoints = "energy_points"
-        case energyValue = "energy_value"
-        case fiber
-        case fiberPoints = "fiber_points"
-        case fiberValue = "fiber_value"
-        case fruitsVegetablesNutsColzaWalnutOliveOils = "fruits_vegetables_nuts_colza_walnut_olive_oils"
-        case fruitsVegetablesNutsColzaWalnutOliveOilsPoints = "fruits_vegetables_nuts_colza_walnut_olive_oils_points"
-        case fruitsVegetablesNutsColzaWalnutOliveOilsValue = "fruits_vegetables_nuts_colza_walnut_olive_oils_value"
-        case isBeverage = "is_beverage"
-        case isCheese = "is_cheese"
-        case isFat = "is_fat"
-        case isWater = "is_water"
-        case negativePoints = "negative_points"
-        case positivePoints = "positive_points"
-        case proteins
-        case proteinsPoints = "proteins_points"
-        case proteinsValue = "proteins_value"
-        case saturatedFat = "saturated_fat"
-        case saturatedFatPoints = "saturated_fat_points"
-        case saturatedFatValue = "saturated_fat_value"
-        case sodium
-        case sodiumPoints = "sodium_points"
-        case sodiumValue = "sodium_value"
-        case sugars
-        case sugarsPoints = "sugars_points"
-        case sugarsValue = "sugars_value"
-        case grade, score, components
-        case countProteins = "count_proteins"
-        case countProteinsReason = "count_proteins_reason"
-        case isFatOilNutsSeeds = "is_fat_oil_nuts_seeds"
-        case isRedMeatProduct = "is_red_meat_product"
-        case negativePointsMax = "negative_points_max"
-        case nonNutritiveSweetenersMax = "non_nutritive_sweeteners_max"
-        case positiveNutrients = "positive_nutrients"
-        case positivePointsMax = "positive_points_max"
-        case withNonNutritiveSweeteners = "with_non_nutritive_sweeteners"
-    }
-}
-
-// MARK: - Components
-struct Components: Codable {
-    let negative, positive: [Tive]
-}
-
-// MARK: - Tive
-struct Tive: Codable {
-    let id: String
-    let points: Int
-    let pointsMax: Int?
-    let unit: String?
-    let value: Double
-
-    enum CodingKeys: String, CodingKey {
-        case id, points
-        case pointsMax = "points_max"
-        case unit, value
-    }
-}
-
-// MARK: - NutriscoreData
-struct NutriscoreData: Codable {
-    let energy: Double
-    let energyPoints: Int
-    let energyValue: Double
-    let fiber, fiberPoints, fiberValue, fruitsVegetablesNutsColzaWalnutOliveOils: Int
-    let fruitsVegetablesNutsColzaWalnutOliveOilsPoints, fruitsVegetablesNutsColzaWalnutOliveOilsValue, isBeverage, isCheese: Int
-    let isFat, isWater, negativePoints, positivePoints: Int
-    let proteins, proteinsPoints, proteinsValue, saturatedFat: Int
-    let saturatedFatPoints, saturatedFatValue, sodium, sodiumPoints: Int
-    let sodiumValue, sugars, sugarsPoints, sugarsValue: Int
-    let grade: String?
-    let score: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case energy
-        case energyPoints = "energy_points"
-        case energyValue = "energy_value"
-        case fiber
-        case fiberPoints = "fiber_points"
-        case fiberValue = "fiber_value"
-        case fruitsVegetablesNutsColzaWalnutOliveOils = "fruits_vegetables_nuts_colza_walnut_olive_oils"
-        case fruitsVegetablesNutsColzaWalnutOliveOilsPoints = "fruits_vegetables_nuts_colza_walnut_olive_oils_points"
-        case fruitsVegetablesNutsColzaWalnutOliveOilsValue = "fruits_vegetables_nuts_colza_walnut_olive_oils_value"
-        case isBeverage = "is_beverage"
-        case isCheese = "is_cheese"
-        case isFat = "is_fat"
-        case isWater = "is_water"
-        case negativePoints = "negative_points"
-        case positivePoints = "positive_points"
-        case proteins
-        case proteinsPoints = "proteins_points"
-        case proteinsValue = "proteins_value"
-        case saturatedFat = "saturated_fat"
-        case saturatedFatPoints = "saturated_fat_points"
-        case saturatedFatValue = "saturated_fat_value"
-        case sodium
-        case sodiumPoints = "sodium_points"
-        case sodiumValue = "sodium_value"
-        case sugars
-        case sugarsPoints = "sugars_points"
-        case sugarsValue = "sugars_value"
-        case grade, score
     }
 }
 
 // MARK: - ProductPackaging
 struct ProductPackaging: Codable {
     let material: String?
-    let shape: String
+    let numberOfUnits: Int?
+    let recycling, shape: String?
+
+    enum CodingKeys: String, CodingKey {
+        case material
+        case numberOfUnits = "number_of_units"
+        case recycling, shape
+    }
 }
 
 // MARK: - PackagingsMaterials
 struct PackagingsMaterials: Codable {
-    let all, enPlastic, enUnknown: Scores
+    let all, enGlass, enMetal, enPlastic: Grades?
+    let enUnknown: Grades?
 
     enum CodingKeys: String, CodingKey {
         case all
+        case enGlass = "en:glass"
+        case enMetal = "en:metal"
         case enPlastic = "en:plastic"
         case enUnknown = "en:unknown"
     }
@@ -1084,29 +1082,32 @@ struct PackagingsMaterials: Codable {
 
 // MARK: - SelectedImages
 struct SelectedImages: Codable {
-    let front, ingredients: Front
-    let nutrition: Nutrition
-    let packaging: Front
+    let front, ingredients, nutrition, packaging: Front?
 }
 
 // MARK: - Front
 struct Front: Codable {
-    let display, small, thumb: FrontDisplay
+    let display, small, thumb: Display?
 }
 
-// MARK: - FrontDisplay
-struct FrontDisplay: Codable {
-    let fr: String
+// MARK: - Display
+struct Display: Codable {
+    let fr: String?
 }
 
-// MARK: - Nutrition
-struct Nutrition: Codable {
-    let display, small, thumb: NutritionDisplay
-}
+// MARK: - Source
+struct Source: Codable {
+    let fields: [String]?
+    let id: String?
+    let images: [JSONAny]?
+    let importT, manufacturer: Int?
+    let name, url: JSONNull?
 
-// MARK: - NutritionDisplay
-struct NutritionDisplay: Codable {
-    let de, fr: String
+    enum CodingKeys: String, CodingKey {
+        case fields, id, images
+        case importT = "import_t"
+        case manufacturer, name, url
+    }
 }
 
 // MARK: - Encode/decode helpers
@@ -1119,6 +1120,10 @@ class JSONNull: Codable, Hashable {
 
     public var hashValue: Int {
         return 0
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        // No-op
     }
 
     public init() {}
@@ -1350,4 +1355,3 @@ class JSONAny: Codable {
         }
     }
 }
-

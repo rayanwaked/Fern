@@ -7,12 +7,26 @@
 
 import SwiftUI
 
+// MARK: - ScanView
 struct ScanView: View {
+    // State variable to store the detected barcode
+    @State private var detectedBarcode = ""
+
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            // Instruction text
+            Text("Scan a Barcode")
+            // ScanModel view to display the camera preview and detect barcodes
+            ScanModel(detectedBarcode: $detectedBarcode)
+               .frame(height: 300)
+            // Display the detected barcode
+            Text("Detected Barcode: \(detectedBarcode)")
+        }
     }
 }
 
+// MARK: - Preview
 #Preview {
     ScanView()
 }

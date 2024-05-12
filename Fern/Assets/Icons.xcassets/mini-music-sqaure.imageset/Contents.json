@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "mini-music-sqaure.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

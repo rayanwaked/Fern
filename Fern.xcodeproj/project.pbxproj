@@ -20,6 +20,16 @@
 		B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A72BF062E7001F5F55 /* ScanModel.swift */; };
 		B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A82BF062E7001F5F55 /* ScanView.swift */; };
 		B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5AA2BF062E7001F5F55 /* SettingsView.swift */; };
+		B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5B62BF1CCB4001F5F55 /* OllamaKit */; };
+		B909B5BA2BF1CCCB001F5F55 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5B92BF1CCCB001F5F55 /* Auth */; };
+		B909B5BC2BF1CCCB001F5F55 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BB2BF1CCCB001F5F55 /* Functions */; };
+		B909B5BE2BF1CCCB001F5F55 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BD2BF1CCCB001F5F55 /* PostgREST */; };
+		B909B5C02BF1CCCB001F5F55 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BF2BF1CCCB001F5F55 /* Realtime */; };
+		B909B5C22BF1CCCB001F5F55 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5C12BF1CCCB001F5F55 /* Storage */; };
+		B909B5C42BF1CCCB001F5F55 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5C32BF1CCCB001F5F55 /* Supabase */; };
+		B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */; };
+		B909B5CA2BF2A57B001F5F55 /* LlamaInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */; };
+		B909B5CC2BF2A584001F5F55 /* LlamaOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */; };
 		B9C953142BE849E100B29C1F /* FernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C953132BE849E100B29C1F /* FernApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +47,9 @@
 		B909B5A72BF062E7001F5F55 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		B909B5A82BF062E7001F5F55 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B909B5AA2BF062E7001F5F55 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaModel.swift; sourceTree = "<group>"; };
+		B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaInput.swift; sourceTree = "<group>"; };
+		B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaOutput.swift; sourceTree = "<group>"; };
 		B9C953102BE849E100B29C1F /* Fern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C953132BE849E100B29C1F /* FernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FernApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B909B5C42BF1CCCB001F5F55 /* Supabase in Frameworks */,
+				B909B5C22BF1CCCB001F5F55 /* Storage in Frameworks */,
+				B909B5BE2BF1CCCB001F5F55 /* PostgREST in Frameworks */,
+				B909B5BC2BF1CCCB001F5F55 /* Functions in Frameworks */,
+				B909B5BA2BF1CCCB001F5F55 /* Auth in Frameworks */,
+				B909B5C02BF1CCCB001F5F55 /* Realtime in Frameworks */,
+				B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,24 @@
 			path = Fern/Modules;
 			sourceTree = SOURCE_ROOT;
 		};
+		B909B5C52BF1D114001F5F55 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B909B5C62BF1D2EF001F5F55 /* Llama */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B909B5C62BF1D2EF001F5F55 /* Llama */ = {
+			isa = PBXGroup;
+			children = (
+				B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */,
+				B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */,
+				B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */,
+			);
+			path = Llama;
+			sourceTree = "<group>";
+		};
 		B9C953072BE849E100B29C1F = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +187,7 @@
 				B9C953132BE849E100B29C1F /* FernApp.swift */,
 				B909B5942BF062D6001F5F55 /* Main */,
 				B909B5AC2BF062E7001F5F55 /* Modules */,
+				B909B5C52BF1D114001F5F55 /* Helpers */,
 				B909B59B2BF062DF001F5F55 /* Assets */,
 			);
 			path = Fern;
@@ -170,6 +209,15 @@
 			dependencies = (
 			);
 			name = Fern;
+			packageProductDependencies = (
+				B909B5B62BF1CCB4001F5F55 /* OllamaKit */,
+				B909B5B92BF1CCCB001F5F55 /* Auth */,
+				B909B5BB2BF1CCCB001F5F55 /* Functions */,
+				B909B5BD2BF1CCCB001F5F55 /* PostgREST */,
+				B909B5BF2BF1CCCB001F5F55 /* Realtime */,
+				B909B5C12BF1CCCB001F5F55 /* Storage */,
+				B909B5C32BF1CCCB001F5F55 /* Supabase */,
+			);
 			productName = Fern;
 			productReference = B9C953102BE849E100B29C1F /* Fern.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +246,10 @@
 				Base,
 			);
 			mainGroup = B9C953072BE849E100B29C1F;
+			packageReferences = (
+				B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */,
+				B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = B9C953112BE849E100B29C1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +280,8 @@
 			files = (
 				B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */,
 				B909B5AD2BF062E7001F5F55 /* HomeView.swift in Sources */,
+				B909B5CC2BF2A584001F5F55 /* LlamaOutput.swift in Sources */,
+				B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */,
 				B9C953142BE849E100B29C1F /* FernApp.swift in Sources */,
 				B909B5952BF062D6001F5F55 /* MainView.swift in Sources */,
 				B909B5AE2BF062E7001F5F55 /* ProductData.swift in Sources */,
@@ -235,6 +289,7 @@
 				B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */,
 				B909B5B12BF062E7001F5F55 /* ProductView.swift in Sources */,
 				B909B5AF2BF062E7001F5F55 /* ProductModel.swift in Sources */,
+				B909B5CA2BF2A57B001F5F55 /* LlamaInput.swift in Sources */,
 				B909B5B02BF062E7001F5F55 /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +496,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kevinhermawan/OllamaKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B909B5B62BF1CCB4001F5F55 /* OllamaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */;
+			productName = OllamaKit;
+		};
+		B909B5B92BF1CCCB001F5F55 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		B909B5BB2BF1CCCB001F5F55 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		B909B5BD2BF1CCCB001F5F55 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		B909B5BF2BF1CCCB001F5F55 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		B909B5C12BF1CCCB001F5F55 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		B909B5C32BF1CCCB001F5F55 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9C953082BE849E100B29C1F /* Project object */;
 }

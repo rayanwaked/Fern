@@ -11,7 +11,7 @@ import Foundation
 class ProductModel: ObservableObject {
     // MARK: - Properties
     // Published properties to notify the view of changes
-    @Published var product: Product? = nil
+    @Published var product: [String: Any]? = nil
     @Published var isLoading = true
     @Published var errorMessage: String? = nil
     
@@ -29,7 +29,7 @@ class ProductModel: ObservableObject {
                 switch result {
                 case .success(let productData):
                     // If the fetch is successful, update the entire product object
-                    self.product = productData.product
+                    self.product = productData["product"] as? [String: Any]
                 case .failure(let error):
                     // If the fetch fails, update the errorMessage
                     self.errorMessage = error.localizedDescription

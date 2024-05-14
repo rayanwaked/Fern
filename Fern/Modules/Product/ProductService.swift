@@ -9,7 +9,6 @@ import Foundation
 
 // MARK: - ProductService
 struct ProductService {
-    
     // Fetch product details from Open Food Facts API using the product barcode
     static func fetchProduct(barcode: String, completion: @escaping (Result<[String: Any], Error>) -> Void) {
         let urlString = "https://world.openfoodfacts.org/api/v0/product/\(barcode).json"

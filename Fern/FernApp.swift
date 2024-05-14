@@ -11,7 +11,7 @@ import SwiftUI
 struct FernApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            HomeView()
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-  "originHash" : "2b08a6b29e2de539176ca6418460137f41726daea2d1db3b9ee072bdd4ae7914",
+  "originHash" : "2a6dd4690782eafea32e6e7295c65202dfd26738f2ea7ea9dea09c65b0d93057",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -11,48 +11,12 @@
       }
     },
     {
-      "identity" : "keychainaccess",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
-      "state" : {
-        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
-        "version" : "4.2.2"
-      }
-    },
-    {
       "identity" : "ollamakit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kevinhermawan/OllamaKit.git",
       "state" : {
         "revision" : "0b0ab9995e85ca7163ca4a4bb1aaa5e6ac2fd619",
         "version" : "4.1.0"
-      }
-    },
-    {
-      "identity" : "supabase-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/supabase/supabase-swift",
-      "state" : {
-        "revision" : "6d4ac07cbd1b28558453269fbd99e90e1694861a",
-        "version" : "2.9.0"
-      }
-    },
-    {
-      "identity" : "swift-concurrency-extras",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
-      "state" : {
-        "revision" : "bb5059bde9022d69ac516803f4f227d8ac967f71",
-        "version" : "1.1.0"
-      }
-    },
-    {
-      "identity" : "swift-crypto",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-crypto.git",
-      "state" : {
-        "revision" : "bc1c29221f6dfeb0ebbfbc98eb95cd3d4967868e",
-        "version" : "3.4.0"
       }
     }
   ],

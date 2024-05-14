@@ -9,14 +9,28 @@ import SwiftUI
 
 // MARK: - ProductView
 struct ProductView: View {
+    // Llama3 instance
+    @StateObject private var llamaModel = LlamaModel()
     // Product variables and barcode
     @StateObject private var productModel = ProductModel()
-    var productBarcode: String
+    let productBarcode: String
+    @State var llamaTopic = ""
 
     var body: some View {
+        productInformation
+        
+        if !llamaTopic.isEmpty {
+            llamaInformation
+        } else {
+            Text("waiting")
+        }
+    }
+}
+
+extension ProductView {
+    var productInformation: some View {
         VStack {
             if productModel.isLoading {
-                // Display a loading spinner while the product data is loading
                 ProgressView()
             } else if let errorMessage = productModel.errorMessage {
                 // Display an error message if there was an error loading the product data
@@ -26,6 +40,9 @@ struct ProductView: View {
                 // Display the product name if available
                 if let productName = product["product_name"] as? String {
                     Text(productName)
+                        .onAppear {
+                            llamaTopic = productName
+                        }
                 } else {
                     // Handle case where product name is not available
                     Text("Product name not available")
@@ -39,6 +56,14 @@ struct ProductView: View {
             // Load the product data when the view appears
             productModel.loadProduct(with: productBarcode)
         }
+    }
+    
+    var llamaInformation: some View {
+        Text("\(llamaModel.response)")
+            .onAppear {
+                llamaModel.message = "Tell me about \(llamaTopic)"
+                llamaModel.askLlama()
+            }
     }
 }
 

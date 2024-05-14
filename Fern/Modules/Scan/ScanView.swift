@@ -15,13 +15,12 @@ struct ScanView: View {
     // MARK: - Body
     var body: some View {
         VStack {
-            // Instruction text
-            Text("Scan a Barcode")
-            // ScanModel view to display the camera preview and detect barcodes
-            ScanModel(detectedBarcode: $detectedBarcode)
-               .frame(height: 300)
-            // Display the detected barcode
-            Text("Detected Barcode: \(detectedBarcode)")
+            if detectedBarcode.isEmpty {
+                ScanModel(detectedBarcode: $detectedBarcode)
+                    .frame(height: 300)
+            } else {
+                ProductView(productBarcode: detectedBarcode)
+            }
         }
     }
 }

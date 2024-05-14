@@ -7,10 +7,15 @@
 
 import SwiftUI
 
-struct HomeView: View {    
+struct HomeView: View {
+    @StateObject private var llamaModel = LlamaModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
+        Text("\(llamaModel.response)")
+            .onAppear {
+//                llamaModel.message = "Hi"
+//                llamaModel.askLlama()
+            }
     }
 }
 

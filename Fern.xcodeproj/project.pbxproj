@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B909B5952BF062D6001F5F55 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5932BF062D6001F5F55 /* MainView.swift */; };
 		B909B59C2BF062DF001F5F55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B909B5962BF062DF001F5F55 /* Preview Assets.xcassets */; };
 		B909B59D2BF062DF001F5F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B909B5982BF062DF001F5F55 /* Assets.xcassets */; };
 		B909B59E2BF062DF001F5F55 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B909B5992BF062DF001F5F55 /* Colors.xcassets */; };
@@ -21,20 +20,11 @@
 		B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A82BF062E7001F5F55 /* ScanView.swift */; };
 		B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5AA2BF062E7001F5F55 /* SettingsView.swift */; };
 		B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5B62BF1CCB4001F5F55 /* OllamaKit */; };
-		B909B5BA2BF1CCCB001F5F55 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5B92BF1CCCB001F5F55 /* Auth */; };
-		B909B5BC2BF1CCCB001F5F55 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BB2BF1CCCB001F5F55 /* Functions */; };
-		B909B5BE2BF1CCCB001F5F55 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BD2BF1CCCB001F5F55 /* PostgREST */; };
-		B909B5C02BF1CCCB001F5F55 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5BF2BF1CCCB001F5F55 /* Realtime */; };
-		B909B5C22BF1CCCB001F5F55 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5C12BF1CCCB001F5F55 /* Storage */; };
-		B909B5C42BF1CCCB001F5F55 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5C32BF1CCCB001F5F55 /* Supabase */; };
 		B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */; };
-		B909B5CA2BF2A57B001F5F55 /* LlamaInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */; };
-		B909B5CC2BF2A584001F5F55 /* LlamaOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */; };
 		B9C953142BE849E100B29C1F /* FernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C953132BE849E100B29C1F /* FernApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B909B5932BF062D6001F5F55 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B909B5962BF062DF001F5F55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B909B5982BF062DF001F5F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B909B5992BF062DF001F5F55 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -48,8 +38,7 @@
 		B909B5A82BF062E7001F5F55 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B909B5AA2BF062E7001F5F55 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaModel.swift; sourceTree = "<group>"; };
-		B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaInput.swift; sourceTree = "<group>"; };
-		B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaOutput.swift; sourceTree = "<group>"; };
+		B909B5D12BF2E648001F5F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C953102BE849E100B29C1F /* Fern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C953132BE849E100B29C1F /* FernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FernApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,12 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B909B5C42BF1CCCB001F5F55 /* Supabase in Frameworks */,
-				B909B5C22BF1CCCB001F5F55 /* Storage in Frameworks */,
-				B909B5BE2BF1CCCB001F5F55 /* PostgREST in Frameworks */,
-				B909B5BC2BF1CCCB001F5F55 /* Functions in Frameworks */,
-				B909B5BA2BF1CCCB001F5F55 /* Auth in Frameworks */,
-				B909B5C02BF1CCCB001F5F55 /* Realtime in Frameworks */,
 				B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,14 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B909B5942BF062D6001F5F55 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				B909B5932BF062D6001F5F55 /* MainView.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		B909B5972BF062DF001F5F55 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +70,7 @@
 				B909B5982BF062DF001F5F55 /* Assets.xcassets */,
 				B909B5992BF062DF001F5F55 /* Colors.xcassets */,
 				B909B59A2BF062DF001F5F55 /* Icons.xcassets */,
+				B909B5D12BF2E648001F5F55 /* Info.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -147,20 +123,18 @@
 			path = Fern/Modules;
 			sourceTree = SOURCE_ROOT;
 		};
-		B909B5C52BF1D114001F5F55 /* Helpers */ = {
+		B909B5C52BF1D114001F5F55 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				B909B5C62BF1D2EF001F5F55 /* Llama */,
 			);
-			path = Helpers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B909B5C62BF1D2EF001F5F55 /* Llama */ = {
 			isa = PBXGroup;
 			children = (
 				B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */,
-				B909B5C92BF2A57B001F5F55 /* LlamaInput.swift */,
-				B909B5CB2BF2A584001F5F55 /* LlamaOutput.swift */,
 			);
 			path = Llama;
 			sourceTree = "<group>";
@@ -185,9 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				B9C953132BE849E100B29C1F /* FernApp.swift */,
-				B909B5942BF062D6001F5F55 /* Main */,
 				B909B5AC2BF062E7001F5F55 /* Modules */,
-				B909B5C52BF1D114001F5F55 /* Helpers */,
+				B909B5C52BF1D114001F5F55 /* Services */,
 				B909B59B2BF062DF001F5F55 /* Assets */,
 			);
 			path = Fern;
@@ -211,12 +184,6 @@
 			name = Fern;
 			packageProductDependencies = (
 				B909B5B62BF1CCB4001F5F55 /* OllamaKit */,
-				B909B5B92BF1CCCB001F5F55 /* Auth */,
-				B909B5BB2BF1CCCB001F5F55 /* Functions */,
-				B909B5BD2BF1CCCB001F5F55 /* PostgREST */,
-				B909B5BF2BF1CCCB001F5F55 /* Realtime */,
-				B909B5C12BF1CCCB001F5F55 /* Storage */,
-				B909B5C32BF1CCCB001F5F55 /* Supabase */,
 			);
 			productName = Fern;
 			productReference = B9C953102BE849E100B29C1F /* Fern.app */;
@@ -248,7 +215,6 @@
 			mainGroup = B9C953072BE849E100B29C1F;
 			packageReferences = (
 				B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */,
-				B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			productRefGroup = B9C953112BE849E100B29C1F /* Products */;
 			projectDirPath = "";
@@ -280,16 +246,13 @@
 			files = (
 				B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */,
 				B909B5AD2BF062E7001F5F55 /* HomeView.swift in Sources */,
-				B909B5CC2BF2A584001F5F55 /* LlamaOutput.swift in Sources */,
 				B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */,
 				B9C953142BE849E100B29C1F /* FernApp.swift in Sources */,
-				B909B5952BF062D6001F5F55 /* MainView.swift in Sources */,
 				B909B5AE2BF062E7001F5F55 /* ProductData.swift in Sources */,
 				B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */,
 				B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */,
 				B909B5B12BF062E7001F5F55 /* ProductView.swift in Sources */,
 				B909B5AF2BF062E7001F5F55 /* ProductModel.swift in Sources */,
-				B909B5CA2BF2A57B001F5F55 /* LlamaInput.swift in Sources */,
 				B909B5B02BF062E7001F5F55 /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +390,8 @@
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fern/Assets/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fern uses your phone's camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,9 +404,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Waked.Fern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +425,8 @@
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Fern/Assets/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fern uses your phone's camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,9 +439,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Waked.Fern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -506,14 +481,6 @@
 				minimumVersion = 4.1.0;
 			};
 		};
-		B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/supabase/supabase-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -521,36 +488,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */;
 			productName = OllamaKit;
-		};
-		B909B5B92BF1CCCB001F5F55 /* Auth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Auth;
-		};
-		B909B5BB2BF1CCCB001F5F55 /* Functions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Functions;
-		};
-		B909B5BD2BF1CCCB001F5F55 /* PostgREST */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = PostgREST;
-		};
-		B909B5BF2BF1CCCB001F5F55 /* Realtime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Realtime;
-		};
-		B909B5C12BF1CCCB001F5F55 /* Storage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Storage;
-		};
-		B909B5C32BF1CCCB001F5F55 /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B909B5B82BF1CCCB001F5F55 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

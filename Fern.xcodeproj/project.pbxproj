@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,9 @@
 		B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A72BF062E7001F5F55 /* ScanModel.swift */; };
 		B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A82BF062E7001F5F55 /* ScanView.swift */; };
 		B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5AA2BF062E7001F5F55 /* SettingsView.swift */; };
-		B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = B909B5B62BF1CCB4001F5F55 /* OllamaKit */; };
-		B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */; };
+		B912EA432BF5683400C996F8 /* Path in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA422BF5683400C996F8 /* Path */; };
+		B912EA4A2BF56D2000C996F8 /* Transformers in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA492BF56D2000C996F8 /* Transformers */; };
+		B912EA4C2BF56D2000C996F8 /* hub-cli in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA4B2BF56D2000C996F8 /* hub-cli */; };
 		B9C953142BE849E100B29C1F /* FernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C953132BE849E100B29C1F /* FernApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,6 @@
 		B909B5A72BF062E7001F5F55 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		B909B5A82BF062E7001F5F55 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		B909B5AA2BF062E7001F5F55 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaModel.swift; sourceTree = "<group>"; };
 		B909B5D12BF2E648001F5F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C953102BE849E100B29C1F /* Fern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C953132BE849E100B29C1F /* FernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FernApp.swift; sourceTree = "<group>"; };
@@ -48,7 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B909B5B72BF1CCB4001F5F55 /* OllamaKit in Frameworks */,
+				B912EA4C2BF56D2000C996F8 /* hub-cli in Frameworks */,
+				B912EA4A2BF56D2000C996F8 /* Transformers in Frameworks */,
+				B912EA432BF5683400C996F8 /* Path in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,22 +125,6 @@
 			path = Fern/Modules;
 			sourceTree = SOURCE_ROOT;
 		};
-		B909B5C52BF1D114001F5F55 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B909B5C62BF1D2EF001F5F55 /* Llama */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		B909B5C62BF1D2EF001F5F55 /* Llama */ = {
-			isa = PBXGroup;
-			children = (
-				B909B5C72BF2A2B7001F5F55 /* LlamaModel.swift */,
-			);
-			path = Llama;
-			sourceTree = "<group>";
-		};
 		B9C953072BE849E100B29C1F = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +146,6 @@
 			children = (
 				B9C953132BE849E100B29C1F /* FernApp.swift */,
 				B909B5AC2BF062E7001F5F55 /* Modules */,
-				B909B5C52BF1D114001F5F55 /* Services */,
 				B909B59B2BF062DF001F5F55 /* Assets */,
 			);
 			path = Fern;
@@ -183,7 +168,9 @@
 			);
 			name = Fern;
 			packageProductDependencies = (
-				B909B5B62BF1CCB4001F5F55 /* OllamaKit */,
+				B912EA422BF5683400C996F8 /* Path */,
+				B912EA492BF56D2000C996F8 /* Transformers */,
+				B912EA4B2BF56D2000C996F8 /* hub-cli */,
 			);
 			productName = Fern;
 			productReference = B9C953102BE849E100B29C1F /* Fern.app */;
@@ -214,7 +201,8 @@
 			);
 			mainGroup = B9C953072BE849E100B29C1F;
 			packageReferences = (
-				B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */,
+				B912EA412BF5683400C996F8 /* XCRemoteSwiftPackageReference "Path.swift" */,
+				B912EA482BF56D2000C996F8 /* XCLocalSwiftPackageReference "swift-transformers" */,
 			);
 			productRefGroup = B9C953112BE849E100B29C1F /* Products */;
 			projectDirPath = "";
@@ -246,7 +234,6 @@
 			files = (
 				B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */,
 				B909B5AD2BF062E7001F5F55 /* HomeView.swift in Sources */,
-				B909B5C82BF2A2B7001F5F55 /* LlamaModel.swift in Sources */,
 				B9C953142BE849E100B29C1F /* FernApp.swift in Sources */,
 				B909B5AE2BF062E7001F5F55 /* ProductData.swift in Sources */,
 				B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */,
@@ -386,7 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fern/Assets/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Fern/Assets/Preview\\ Content";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -395,8 +382,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fern/Assets/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Fern/Assets/Preview\\ Content";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -430,8 +417,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,22 +459,37 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		B912EA482BF56D2000C996F8 /* XCLocalSwiftPackageReference "swift-transformers" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "swift-transformers";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
-		B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */ = {
+		B912EA412BF5683400C996F8 /* XCRemoteSwiftPackageReference "Path.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kevinhermawan/OllamaKit.git";
+			repositoryURL = "https://github.com/mxcl/Path.swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.0;
+				minimumVersion = 1.4.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B909B5B62BF1CCB4001F5F55 /* OllamaKit */ = {
+		B912EA422BF5683400C996F8 /* Path */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B909B5B52BF1CCB4001F5F55 /* XCRemoteSwiftPackageReference "OllamaKit" */;
-			productName = OllamaKit;
+			package = B912EA412BF5683400C996F8 /* XCRemoteSwiftPackageReference "Path.swift" */;
+			productName = Path;
+		};
+		B912EA492BF56D2000C996F8 /* Transformers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Transformers;
+		};
+		B912EA4B2BF56D2000C996F8 /* hub-cli */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "hub-cli";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

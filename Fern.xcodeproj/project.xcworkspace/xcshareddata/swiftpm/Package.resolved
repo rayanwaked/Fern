@@ -1,22 +1,22 @@
 {
-  "originHash" : "2a6dd4690782eafea32e6e7295c65202dfd26738f2ea7ea9dea09c65b0d93057",
+  "originHash" : "9715859775e5e795fdbc4b23f643c8a305f83783e7eb6cc9dc77cc6f08168a46",
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "path.swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "location" : "https://github.com/mxcl/Path.swift.git",
       "state" : {
-        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
-        "version" : "5.9.1"
+        "revision" : "8e355c28e9393c42e58b18c54cace2c42c98a616",
+        "version" : "1.4.1"
       }
     },
     {
-      "identity" : "ollamakit",
+      "identity" : "swift-argument-parser",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kevinhermawan/OllamaKit.git",
+      "location" : "https://github.com/apple/swift-argument-parser.git",
       "state" : {
-        "revision" : "0b0ab9995e85ca7163ca4a4bb1aaa5e6ac2fd619",
-        "version" : "4.1.0"
+        "revision" : "c8ed701b513cf5177118a175d85fbbbcd707ab41",
+        "version" : "1.3.0"
       }
     }
   ],

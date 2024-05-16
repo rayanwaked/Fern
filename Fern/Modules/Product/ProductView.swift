@@ -9,8 +9,6 @@ import SwiftUI
 
 // MARK: - ProductView
 struct ProductView: View {
-    // Llama3 instance
-    @StateObject private var llamaModel = LlamaModel()
     // Product variables and barcode
     @StateObject private var productModel = ProductModel()
     let productBarcode: String
@@ -18,12 +16,6 @@ struct ProductView: View {
 
     var body: some View {
         productInformation
-        
-        if !llamaTopic.isEmpty {
-            llamaInformation
-        } else {
-            Text("waiting")
-        }
     }
 }
 
@@ -56,14 +48,6 @@ extension ProductView {
             // Load the product data when the view appears
             productModel.loadProduct(with: productBarcode)
         }
-    }
-    
-    var llamaInformation: some View {
-        Text("\(llamaModel.response)")
-            .onAppear {
-                llamaModel.message = "Tell me about \(llamaTopic)"
-                llamaModel.askLlama()
-            }
     }
 }
 

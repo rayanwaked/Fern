@@ -18,7 +18,6 @@
 		B909B5B12BF062E7001F5F55 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A52BF062E7001F5F55 /* ProductView.swift */; };
 		B909B5B22BF062E7001F5F55 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A72BF062E7001F5F55 /* ScanModel.swift */; };
 		B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5A82BF062E7001F5F55 /* ScanView.swift */; };
-		B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909B5AA2BF062E7001F5F55 /* SettingsView.swift */; };
 		B912EA432BF5683400C996F8 /* Path in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA422BF5683400C996F8 /* Path */; };
 		B912EA4A2BF56D2000C996F8 /* Transformers in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA492BF56D2000C996F8 /* Transformers */; };
 		B912EA4C2BF56D2000C996F8 /* hub-cli in Frameworks */ = {isa = PBXBuildFile; productRef = B912EA4B2BF56D2000C996F8 /* hub-cli */; };
@@ -37,8 +36,9 @@
 		B909B5A52BF062E7001F5F55 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		B909B5A72BF062E7001F5F55 /* ScanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		B909B5A82BF062E7001F5F55 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
-		B909B5AA2BF062E7001F5F55 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B909B5D12BF2E648001F5F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91928E82BF7E28E00215B59 /* AboutScan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AboutScan.md; sourceTree = "<group>"; };
+		B96263C32BF6A886005A6DA3 /* AboutProduct.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AboutProduct.md; sourceTree = "<group>"; };
 		B9C953102BE849E100B29C1F /* Fern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C953132BE849E100B29C1F /* FernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FernApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +88,7 @@
 		B909B5A62BF062E7001F5F55 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				B96263C32BF6A886005A6DA3 /* AboutProduct.md */,
 				B909B5A22BF062E7001F5F55 /* ProductData.swift */,
 				B909B5A32BF062E7001F5F55 /* ProductModel.swift */,
 				B909B5A42BF062E7001F5F55 /* ProductService.swift */,
@@ -99,18 +100,11 @@
 		B909B5A92BF062E7001F5F55 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				B91928E82BF7E28E00215B59 /* AboutScan.md */,
 				B909B5A72BF062E7001F5F55 /* ScanModel.swift */,
 				B909B5A82BF062E7001F5F55 /* ScanView.swift */,
 			);
 			path = Scan;
-			sourceTree = "<group>";
-		};
-		B909B5AB2BF062E7001F5F55 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				B909B5AA2BF062E7001F5F55 /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		B909B5AC2BF062E7001F5F55 /* Modules */ = {
@@ -119,7 +113,6 @@
 				B909B5A12BF062E7001F5F55 /* Home */,
 				B909B5A62BF062E7001F5F55 /* Product */,
 				B909B5A92BF062E7001F5F55 /* Scan */,
-				B909B5AB2BF062E7001F5F55 /* Settings */,
 			);
 			name = Modules;
 			path = Fern/Modules;
@@ -236,7 +229,6 @@
 				B909B5AD2BF062E7001F5F55 /* HomeView.swift in Sources */,
 				B9C953142BE849E100B29C1F /* FernApp.swift in Sources */,
 				B909B5AE2BF062E7001F5F55 /* ProductData.swift in Sources */,
-				B909B5B42BF062E7001F5F55 /* SettingsView.swift in Sources */,
 				B909B5B32BF062E7001F5F55 /* ScanView.swift in Sources */,
 				B909B5B12BF062E7001F5F55 /* ProductView.swift in Sources */,
 				B909B5AF2BF062E7001F5F55 /* ProductModel.swift in Sources */,

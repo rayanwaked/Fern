@@ -12,7 +12,6 @@ struct ProductView: View {
     // Product variables and barcode
     @StateObject private var productModel = ProductModel()
     let productBarcode: String
-    @State var llamaTopic = ""
 
     var body: some View {
         productInformation
@@ -25,16 +24,13 @@ extension ProductView {
             if productModel.isLoading {
                 ProgressView()
             } else if let errorMessage = productModel.errorMessage {
-                // Display an error message if there was an error loading the product data
+                // Display a message if there was an error
                 Text("Error: \(errorMessage)")
                     .foregroundColor(.red)
             } else if let product = productModel.product {
                 // Display the product name if available
                 if let productName = product["product_name"] as? String {
                     Text(productName)
-                        .onAppear {
-                            llamaTopic = productName
-                        }
                 } else {
                     // Handle case where product name is not available
                     Text("Product name not available")
